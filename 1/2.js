@@ -44,7 +44,7 @@ if (user === '') {
 }
 
 // #6
-var input = prompt();
+var input = prompt('Введите пароль: ');
 var pass1 = 9583;
 var pass2 = 1747;
 var pass3 = 3331;
@@ -62,6 +62,37 @@ if (input == pass1 || input == pass2) {
     alert('Неверный пароль');
 }
 
-// #7
-var str1 = 1;
+// 7
+// не понятно задание
+
+// 7,2
+var a = 8;
+var b = 7;
+var max;
+
+(a > b) ? alert(max = a) : alert(max = b);
+
+// 8
+var width = prompt('Ширина: ');
+var height = prompt('Высота: ');
+var s = width * height / 2;
+
+alert(s);
+
+// 9
+var num = prompt('Число: ');
+
+if (num > 0) {
+    alert(1);
+} else if (num < 0) {
+    alert(-1);
+} else {
+    alert(0);
+}
+
+
+
+
+
+
 
