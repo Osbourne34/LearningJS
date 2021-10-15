@@ -1,0 +1,57 @@
+// var counter=100;
+
+// while (counter<=10){
+// 	console.log(counter);
+// 	++counter;
+// }
+
+// console.log('end');
+
+//  do {
+// 	console.log(counter);
+// 	counter++;
+//  }
+//  while(counter<=10)
+
+// for (var i=0; i<=10; i++){
+// 	 console.log(i)
+// }
+// console.log('end');
+
+
+
+ 
+
+// function mySum(start,end){
+// 	var sum=0;
+
+// 	for (start=0; start<=end; start++){
+		
+// 	}
+
+	
+// }
+
+
+
+function mySum(){
+	var result=0;
+	for (var i=1; i<=100; i++){
+		result=result+i;
+		// result+=i;
+	 
+	}
+	 
+	return result;
+}
+
+console.log(mySum())
+
+ 
+ 
+
+ 
+
+
+
+
