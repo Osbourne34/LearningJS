@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 29) Составьте программу, которая принимает с клавиатуры три числа и проверяет, являются ли эти числа углами одного и того же треугольника. По результатам проверки следует вывести на экран соответствующее текстовое сообщение.
+        // ввод: 90, 30, 60 ⇒ вывод: это треугольник; ввод: 90, 0, 90 ⇒ вывод: это не треугольник)
+
+        var angle;
+        var count = 0;
+        var result = 0;
+
+        while(count != 3) {
+            angle = +prompt();
+            result += angle;
+            count++;
+        }
+        (result == 180) ? alert('Это треугольник') : alert('Это не треугольник');
+
+    </script>
+
+</body>
+</html>
