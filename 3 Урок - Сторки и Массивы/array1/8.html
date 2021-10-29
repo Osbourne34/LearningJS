@@ -11,19 +11,20 @@
     <script>
 
         // 8) Требуется заполнить массив числами, которые вводит пользователь, и вычислить их сумму. Если пользователь вводит ноль или превышен размер массива, то запросы на ввод должны прекратиться.
-        var count = 0;
+
         var arr = [];
-        var sum = 0;
-        do {
+        var summ = 0;
+        var count = 0;
+        while(count != 10) {
             var num = +prompt();
+            if (num == 0) {
+                break;
+            }
             arr.push(num);
-            sum += arr[count];
+            summ += arr[count];
             count++;
         }
-        while(count < 10)
-
-        console.log(arr);
-        console.log(sum);
+        console.log(summ);
 
     </script>
 

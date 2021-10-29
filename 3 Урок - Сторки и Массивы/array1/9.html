@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 9) Дан массив из 50 элементов и лежат в диапазоне от -50 до 49 включительно.  Требуется из одного массива скопировать в другой массив значения в диапазоне от -5 до 5 включительно и подсчитать их количество.
+
+        var arr = [-56,-54,-51,-49,-10,-6,-4,-2,1,4,6,7,49,54,56];
+        var arrNew = [];
+        for(k in arr) {
+            while(-50 >= arr[k]) {
+                arr.splice(0,1);
+            }
+            while(49 < arr[k]) {
+                arr.splice(-1,1);
+            }
+            if(-5 < arr[k] && 5 > arr[k]) {
+                arrNew.push(arr[k]);
+            }
+        }
+        console.log(arrNew);
+
+    </script>
+
+</body>
+</html>
