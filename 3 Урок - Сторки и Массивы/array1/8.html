@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 8) Требуется заполнить массив числами, которые вводит пользователь, и вычислить их сумму. Если пользователь вводит ноль или превышен размер массива, то запросы на ввод должны прекратиться.
+        var count = 0;
+        var arr = [];
+        var sum = 0;
+        do {
+            var num = +prompt();
+            arr.push(num);
+            sum += arr[count];
+            count++;
+        }
+        while(count < 10)
+
+        console.log(arr);
+        console.log(sum);
+
+    </script>
+
+</body>
+</html>
