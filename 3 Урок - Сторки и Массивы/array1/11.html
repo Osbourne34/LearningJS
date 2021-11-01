@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+        
+        // 11) Дан массив из N элементов в диапазоне [100;300]. Сжать массив, оставив в нем только те элементы, сумма цифр которых четная.
+
+        var arr = [99, 123, 152, 275, 236, 237, 268, 301];
+        
+        for(i=0;i<arr.length;i++) {
+            if(arr[i] > 100 && arr[i] < 300) {
+                var summ = 0;
+                function func(num) {
+                    while(num != 0) {
+                        var endNum = num % 10;
+                        num = parseInt(num / 10);
+                        summ += endNum;
+                    }
+                    if(summ % 2 == 0) {
+                        return console.log(summ);
+                    }
+                }
+                func(arr[i]);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
