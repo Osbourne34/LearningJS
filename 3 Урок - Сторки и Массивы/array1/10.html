@@ -21,15 +21,15 @@
             if(arr[i] < 0) {
                 sum += arr[i];
             }
-        }
-        if (-100 < sum) {
-            for(i=0; i<arr.length;i++) {
-                if(arr[i] > 0) {
-                    arr2.push(arr[i]);
-                }
+            if(arr[i] > 0) {
+                arr2.push(arr[i]);
             }
         }
-        minNum = Math.min.apply(null , arr2);
+        for(i=0; i<arr2.length; i++) {
+            if(arr2[0] > arr2[i]) {
+                minNum = arr2[i];
+            }
+        }
         console.log(sum);
         console.log(minNum);
         console.log(sum + minNum);
