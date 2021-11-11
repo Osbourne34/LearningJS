@@ -12,16 +12,18 @@
 
         // 7) Найти максимальный элемент массива и его индекс (max_num и max_index).
 
-        var arr = [1,3,4,5,7,8,3];
-        var maxNum = arr[0];
+        var arr = [2,3,4,5,8,7,100,8,3];
+        var maxNum = 0;
 
-        for(k in arr) {
-            if(maxNum < arr[k]) {
-                maxNum = arr[k];
+        for(num of arr) {
+            if(maxNum < num) {
+                maxNum = num;
             }
         }
-        console.log(maxNum);
-        console.log(arr.indexOf(maxNum));
+        console.log(`Индекс максимального числа: ${arr.indexOf(maxNum)}`);
+        console.log(`Максимальное число: ${maxNum}`);
+
+
     </script>
 
 </body>

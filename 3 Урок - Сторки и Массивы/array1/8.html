@@ -15,7 +15,9 @@
         var arr = [];
         var summ = 0;
         var count = 0;
-        while(count != 10) {
+        var kolvo = +prompt('Сколько раз ввести: ');
+
+        while(count != kolvo) {
             var num = +prompt();
             if (num == 0) {
                 break;
@@ -24,6 +26,7 @@
             summ += arr[count];
             count++;
         }
+
         console.log(summ);
 
     </script>
