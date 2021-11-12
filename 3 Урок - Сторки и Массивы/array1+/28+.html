@@ -14,9 +14,22 @@
 
         var arr = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 
-        for(arrs of arr) {
+        for(i = 0; i < arr.length; i++) {
             
-            console.log(arrs.join('  '));
+            for(k = 0; k < arr[i].length; k++) {
+                if (i == 2 && k == 2) {
+                    arr[i][k] = 3;
+                }
+                else if (k == 2) {
+                    arr[i][k] = 1;
+                }
+                else if (i == 2) {
+                    arr[i][k] = 2;
+                }
+            }
+
+            console.log(arr[i]);
+
         }
 
     </script>

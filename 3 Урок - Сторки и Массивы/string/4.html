@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 4) Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde def", то должно быть выведено "abcdef".
+
+        var str = 'abc cde def';
+
+        var probel = str.split(' ').join(''); // убираем проблемы в строке
+        var result = '';
+        var arrStr = [];
+
+        for (i = 0; i < probel.length; i++) {
+            arrStr.push(probel[i]);
+        }
+        for(k = 0; k < arrStr.length; k++) {
+            // console.log(arrStr[k]);
+            var count = 0;
+            for(j = 0; j < probel.length; j++) {
+                if(i == k) {
+                    continue;
+                }
+                else if(probel[k] == arrStr[j]) {
+                    // console.log('yes');
+                    probel.replace(k);
+                    result += probel;
+                }
+                else {
+                    // console.log('no');
+                }
+            }
+        }
+        console.log(result);
+
+    </script>
+
+</body>
+
+</html>
