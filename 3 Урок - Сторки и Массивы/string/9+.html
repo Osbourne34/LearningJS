@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+
+<body>
+
+    <script>
+        // 9) Вводятся строки. Определить самую длинную строку и вывести ее номер на экран. Если самых длинных строк несколько, то вывести номера всех таких строк.
+
+        var arrayOfStrings = [
+            'Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet consectetur.',
+            'Lorem ipsum dolor sit.',
+            'Lorem ipsum dolor sit amet consectetu4.',
+            'Lorem ipsum dolor sit amet consectetu4.'
+        ]
+        var longString = '';
+        var result = [];
+
+        for (string of arrayOfStrings) { 
+            if (string.length > longString.length) {
+                longString = string; 
+                result = [];
+                result.push(longString); 
+            } else if (string.length == longString.length) { 
+                longString = string; 
+                result.push(longString); 
+            }
+        }
+
+        console.log(result);
+
+
+    </script>
+
+</body>
+
+</html>

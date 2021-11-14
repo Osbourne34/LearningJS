@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+
+    <script>
+
+        // 8) Вводится ненормированная строка, у которой могут быть пробелы в начале, в конце и между словами более одного пробела. Привести ее к нормированному виду, т.е. удалить все пробелы в начале и конце, а между словами оставить только один пробел.
+
+        var string = '  Lorem   ipsum   dolor  sit amet consectetur adipisicing   elit. Molestiae,   voluptatem? '
+
+        var stringToArray = string.split(' ');
+        var newArr = string.split(' ');
+
+        console.log(stringToArray);
+
+        for(letter of stringToArray) {
+            if(letter === '') {
+                var letterIndex = newArr.indexOf(letter);
+                newArr.splice(letterIndex, 1);
+            }
+        }
+
+        console.log(newArr.join(' '));
+        
+    </script>
+
+</body>
+</html>
