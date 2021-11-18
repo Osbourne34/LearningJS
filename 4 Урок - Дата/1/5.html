@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 5) В анкете заполняется информация о 5 сотрудниках: фамилия, дата заключения контракта и срок(в годах), на какой заключён контракт. Напишите сценарий, определяюший сотрудников, контракт с которыми заканчивается в выходной день.
+
+        var form = {
+            Petya: ['2012-8-13', 5],
+            Vasya: ['2014-3-21', 5],
+            Evgeniy: ['2012-7-8', 5],
+        }
+
+        for (name in form) {
+            var date = new Date(form[name][0]);
+            date.setFullYear(date.getFullYear() + form[name][1]);
+            
+            if(date.getDay() == 0 || date.getDay() == 1) {
+                console.log(name);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
