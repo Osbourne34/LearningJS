@@ -30,8 +30,8 @@ if(personalMovieDB.count < 10) {
 }
 
 var writeYourGenres = () => {
-    for(i = 0; i < 3; i++) {
-        var genre = prompt('Ваш любимый жанр: ');
+    for(i = 1; i <= 3; i++) {
+        var genre = prompt(`Ваш любимый жанр №${i}`);
         personalMovieDB.genres.push(genre);
     }
 }
