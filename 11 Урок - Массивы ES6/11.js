@@ -12,9 +12,22 @@ function random(maxNum, minNum) {
 }
 
 let arr = random(100, 300);
-
 console.log(arr);
 
-let a = '123';
+let numbers = [];
 
-console.log(...a);
+arr.forEach( elem => {
+    let number = ([...String(elem)]);
+    numbers.push(number);
+});
+
+numbers.forEach( elem => {
+    let a;
+    a = elem.reduce((summ, item) => +summ + +item)
+    if (a % 2 == 0) {
+        console.log(a);
+    }
+})
+
+
+
