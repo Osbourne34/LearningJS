@@ -1,0 +1,59 @@
+1) что выведет код?  Объясните
+var a = 5;
+setTimeout(function timeout() {
+    console.log(a);
+    a = 10;
+}, 0);
+
+var p = new Promise(function(resolve, reject) {
+    console.log(a);
+    a = 25;
+    resolve();
+});
+
+p.then(function(){
+    // some code
+});
+
+console.log(a);
+
+
+
+2)  Написать полифилл для Promise.
+3)  Реализовать аналог Promise.all.
+4) Есть недописаная функция "parallel(funcArray, doneAll)":
+function parallel(funcArray, doneAll) {
+
+}
+
+var a = function(done) {
+  setTimeout(function() {
+    done('result a');
+  }, 300);
+};
+
+var b = function(done) {
+  setTimeout(function() {
+    done('result b');
+  }, 200);
+};
+
+parallel([a,b], function(results) {
+  console.log(results); // ['result a', 'result b']
+});
+ Нужно её дописать. Что-то вроде аналога promise.all. И не забудьте, что результирующий массив должен сохранять тот порядок, в котором передавались функции.
+
+
+
+5) В каком порядке выведется консольлог и почему? 
+console.log('1');
+setTimeout(function() {
+  console.log('2')
+}, 0);
+Promise.resolve().then( () => console.log('3') );
+console.log('4');
+
+
+
+
+ 
