@@ -39,7 +39,6 @@ const render = (countries) => {
     document.querySelector('.countries').innerHTML = html;
 }
 
-
 getData(url).then(countries => {
     render(countries);
 
