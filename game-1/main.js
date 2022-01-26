@@ -26,7 +26,6 @@ class Game {
     }
 
     renderItems(array) {
-
         let html = array.map(item => {
             return `
                 <div class="game-item">
@@ -40,36 +39,55 @@ class Game {
 
     }
 
-
     gameLogic() {
         const gameItems = document.querySelectorAll('.game-item');
-        let count = 0;
         let oneItem;
         let twoItem;
-        
-        gameItems.forEach((item, index) => {
+        let disable = false;
+        let countGame = 0;
+
+        gameItems.forEach((item, index, arr) => {
             item.addEventListener('click', () => {
-                count++;
-                if(count === 1) {
-                    oneItem = item;
-                    oneItem.classList.add('open');
-                    oneItem = oneItem.children[0].innerHTML;
-                } else if (count === 2) {
+
+                if (item.classList.contains('open')) {
+                    return;
+                }
+
+                if (item !== oneItem && !disable) {
+                    item.classList.add('open');
+                    if (!oneItem) {
+                        return oneItem = item;
+                    }
+                    disable = true;
                     twoItem = item;
-                    twoItem.classList.add('open');
-                    twoItem = twoItem.children[0].innerHTML;
-                    setTimeout(()=> count = 0, 1500)
-                }
-                if (oneItem !== twoItem) {
-                    setTimeout( () => {
-                        item.classList.remove('open')
-                    }, 1500 )
-                }
+
+                    if (oneItem.children[0].innerHTML === twoItem.children[0].innerHTML) {
+                        oneItem.classList.add('open');
+                        twoItem.classList.add('open');
+                        oneItem = twoItem = '';
+                        countGame++;
+                        if(countGame === this.count / 2) {
+                            setTimeout(()=> {
+                                let restartGame = confirm('Хотите сыграть ещё раз?');
+                                if(restartGame) {
+                                    this.init();
+                                }
+                                return;
+                            }, 500)
+                        }
+                        disable = false;
+                    } else {
+                        setTimeout(() => {
+                            oneItem.classList.remove('open');
+                            twoItem.classList.remove('open');
+                            oneItem = twoItem = '';
+                            disable = false;
+                        }, 500)
+                    };
+                };
             });
         });
-    }
-
-    
+    };
 
     init() {
         this.renderItems(this.random(this.createArray(this.count)));
