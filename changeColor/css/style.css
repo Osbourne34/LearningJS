@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: -webkit-linear-gradient(0deg, #696eff, #f6a9ff);
+    background: linear-gradient(0deg, #696eff, #f6a9ff);
+}
+
+ul li {
+    list-style: none;
+}
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 0 15px;
+}
+.items {
+    width: 75%;
+}
+.form {
+    width: 20%;
+}
+
+.select {
+    position: relative;
+}
+
+.select__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 7px 15px 7px 20px;
+    background-color: #696eff;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.select__toggle:after {
+    content: ">";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    transition: .3s;
+}
+.select__toggle.rotate-arrow:after {
+    transform: rotate(270deg);
+}
+.select__dropdown-list {
+    display: none;
+    position: absolute;
+    top: calc(100% + 3px);
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #696eff;
+    border-radius: 5px;
+}
+.select__dropdown-list.open {
+    display: block;
+}
+
+.select__dropdown-item {
+    cursor: pointer;
+    transition: .2s;
+}
+.select__dropdown-item:hover {
+    color: #fff;   
+}
+.select__dropdown-item + .select__dropdown-item {
+    margin-top: 15px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    width: calc(100% / 3);
+    padding: 20px;
+    border: 1px solid #696eff;
+    text-align: center;
+    margin-top: -1px;
+}
+
+
+.input-color {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    height: 29px;
+}
+.button {
+    font-size: inherit;
+    line-height: 1;
+    width: 100%;
+    display: block;
+    padding: 11px 15px;
+    background-color: #696eff;
+    border-radius: 5px;
+
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+.button:hover {
+    color: #fff;
+}
