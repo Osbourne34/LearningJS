@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: cornflowerblue;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.countries {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.country {
+    width: 23.6%;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.5);
+}
+
+img {
+    display: block;
+}
+.country__media {
+    margin-bottom: 20px;
+}
+.country__flag {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+.country__emblem {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.search__input {
+    font-size: 20px;
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #b4b4b4;
+    transition: .4s;
+}
+.search__input:focus {
+    border-color: #383838;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pagination__item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid red;
+    color: white;
+    background-color: black;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: 700;
+}
+.pagination__item.active, .pagination__item:hover {
+    color: black;
+    background-color: white;
+}
+
+button {
+    height: 30px;
+    padding: 0 15px;
+    border: 1px solid red;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    transition: .4s;
+    font-weight: 700;
+    border-radius: 5px;
+}
+button:hover {
+    color: black;
+    background-color: white;
+}
+button:disabled {
+    background-color: gray;
+    color: #ccc;
+}
