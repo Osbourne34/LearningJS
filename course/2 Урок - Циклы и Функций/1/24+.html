@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 24) Составьте программу, которая принимает с клавиатуры количество очков, полученых в соревнованиях по стрельбе каждым из 10 учеников класса, и выводит на экран лучший результат.
+        // ввод: 92, 75, 83, 82, 96, 81, 88, 76, 93, 78 ⇒ вывод: лучший результат - 96 очков)
+        
+        var count = 0;
+        var lastNum = 0;
+        while (count != 10) {
+            var num = +prompt();
+            if (num > lastNum) {
+                lastNum = num;
+            }
+            count++;
+        }
+        console.log(lastNum);
+    </script>
+
+</body>
+</html>

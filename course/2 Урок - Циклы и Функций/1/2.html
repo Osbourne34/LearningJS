@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 2) Вывести на экран ряд натуральных чисел от минимума до максимума с шагом. Например, если минимум 10, максимум 35, шаг 5, то вывод должен быть таким: 10 15 20 25 30 35. Минимум, максимум и шаг указываются пользователем (считываются с клавиатуры).
+
+        var min = +prompt('Минимальное число: ');
+        var max = +prompt('Максимальное число: ');
+        var step = +prompt('Шаг: ');
+        var output = '';
+
+        for(min; min <= max; min += step) {
+            output += min + ' ';
+        }
+        alert(output);
+    </script>
+
+</body>
+</html>

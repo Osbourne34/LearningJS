@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+        // 9) Написать программу, которая будет складывать, вычитать, умножать или делить два числа. Числа и знак операции вводятся пользователем. После выполнения вычисления программа не должна завершаться, а должна запрашивать новые данные для вычислений. Завершение программы должно выполняться при вводе символа '0' в качестве знака операции. Если пользователь вводит неверный знак (не '0', '+', '-', '*', '/'), то программа должна сообщать ему об ошибке и снова запрашивать знак операции. Также сообщать пользователю о невозможности деления на ноль, если он ввел 0 в качестве делителя.
+
+        var num1, num2, sign, result;
+
+        do {
+            num1 = +prompt('Введите 1-е число: ');
+            num2 = +prompt('Введите 2-е число: ');
+            sign = prompt('Введите знак операций:');
+            while (sign != '+' && sign != '*' && sign != '-' && sign != '/' && sign && sign != '0') {    
+                sign = prompt('Вы ввели неверный знак операций, введите снова: ');
+            }
+            switch (sign) {
+                case '+': 
+                    console.log(result = num1 + num2); 
+                    break;
+                case '-': 
+                    console.log(result = num1 - num2);
+                    break;
+                case '*': 
+                    console.log(result = num1 * num2);
+                    break;
+                case '/': 
+                    console.log(result = num1 / num2);
+                    break;
+            }
+            if (sign == '/') {
+                if(num2 == 0) {
+                    alert('Ошибка, деление на ноль невозможно.')
+                }
+            }
+        } 
+        while (sign != '0')
+        
+
+    </script>
+
+</body>
+</html>

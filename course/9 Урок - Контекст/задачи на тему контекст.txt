@@ -1,0 +1,127 @@
+1) function sayHi() {
+  alert( this.name );
+}
+sayHi.test = 5;
+alert( sayHi.test ); // 5
+var bound = sayHi.bind({
+  name: "Вася"
+});
+alert( bound.test );
+
+
+
+2) Что выведет функция?
+function f() {
+  alert( this ); // ?
+}
+
+let user = {
+  g: f.bind(null)
+};
+
+user.g();
+
+
+3) Можем ли мы изменить this дополнительным связыванием?
+Что выведет этот код?
+function f() {
+  alert(this.name);
+}
+
+f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+
+f();
+
+
+
+
+4) В свойство функции записано значение. Изменится ли оно после применения bind? Обоснуйте ответ.
+function sayHi() {
+  alert( this.name );
+}
+sayHi.test = 5;
+
+let bound = sayHi.bind({
+  name: "Вася"
+});
+
+alert( bound.test ); // что выведет? почему?
+
+
+
+5) Вызов askPassword() в приведённом ниже коде должен проверить пароль и затем вызвать user.loginOk/loginFail в зависимости от ответа.
+Однако, его вызов приводит к ошибке. Почему?
+Исправьте выделенную строку, чтобы всё работало (других строк изменять не надо).
+
+function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+
+let user = {
+  name: 'Вася',
+
+  loginOk() {
+    alert(`${this.name} logged in`);
+  },
+
+  loginFail() {
+    alert(`${this.name} failed to log in`);
+  },
+
+};
+
+askPassword(user.loginOk, user.loginFail);
+
+
+
+6) Это задание является немного усложнённым вариантом одного из предыдущих – Исправьте функцию, теряющую "this".
+Объект user был изменён. Теперь вместо двух функций loginOk/loginFail у него есть только одна – user.login(true/false).
+Что нужно передать в вызов функции askPassword в коде ниже, чтобы она могла вызывать функцию user.login(true) как ok и функцию user.login(false) как fail?
+Ваши изменения должны затрагивать только выделенный фрагмент кода.
+
+function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+
+let user = {
+  name: 'John',
+
+  login(result) {
+    alert( this.name + (result ? ' logged in' : ' failed to log in') );
+  }
+};
+
+askPassword(?, ?); // ?
+
+
+
+7) Напишите функцию getMax(fn, num), которая принимает функцию и число num. Функция getMax должна возвращать функцию, которая при каждом вызове увеличивает свой внутренний счетчик (counter++). Если счетчик больше числа num, внутренняя функция должна возвращать строку «Максимум!»,
+function add(a,b){
+        return a+b
+    }
+
+function getMax(fn, num) {
+
+/*     ваш код     */
+
+}
+
+var addOnlyThreeTimes = getMax(add, 3);
+addOnlyThreeTimes(1,2) // 3
+addOnlyThreeTimes(2,2) // 4
+addOnlyThreeTimes(1,2) // 3
+addOnlyThreeTimes(1,2) // "Максимум!"
+
+
+
+8) Напишите функцию sumEvenArguments, которая принимает все аргументы, переданные ей при вызове, и возвращает сумму четных чисел (из числа аргументов).
+
+sumEvenArguments(1,2,3,6) // 8
+    sumEvenArguments(1,12,6) // 18
+    sumEvenArguments(1,2) // 2
+
+// ваш код

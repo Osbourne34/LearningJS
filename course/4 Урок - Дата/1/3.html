@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // 3)  Выведите на экран текущий день.
+        //     Выведите на экран текущий месяц.
+        //     Выведите на экран текущий год
+        //     Выведите на экран номер текущего дня недели
+
+        var day = new Date().getDate();
+        var month = new Date().getMonth();
+        var year = new Date().getFullYear();
+        var dayOfWeek = new Date().getDay();
+
+        var months = [
+            'Январь',
+            'Февраль',
+            'Март',
+            'Апрель',
+            'Май',
+            'Июнь',
+            'Июль',
+            'Август',
+            'Сентябрь',
+            'Октябрь',
+            'Ноябрь',
+            'Декабрь'
+        ]
+
+        function dateInfo(day, month, year, dayOfWeek){
+            console.log(`Текущий день: ${day}`);
+            console.log(`Текущий месяц: ${months[month]}`);
+            console.log(`Текущий год: ${year}`);
+            console.log(`Текущий день недели: ${dayOfWeek}`);
+        }
+
+        dateInfo(day, month, year, dayOfWeek);
+
+    </script>
+
+</body>
+</html>

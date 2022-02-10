@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 12) Создайте функцию в котором проверяться находиться ли дата в периоде или нет? 
+
+        var startDate = new Date('2012-12-12');
+        var endDate = new Date('2015-12-12');
+        var inputDate = new Date('2010-12-12');
+        var inputDate2 = new Date('2013-12-12');
+
+        function checkDate(date){
+            if(startDate < date || endDate < date) {
+                return console.log(`Дата входит в диапазон ${startDate.toLocaleDateString()} и ${endDate.toLocaleDateString()}`);
+            }
+            return console.log(`Дата не входит в диапазон ${startDate.toLocaleDateString()} и ${endDate.toLocaleDateString()}`);
+        }
+
+        checkDate(inputDate);
+        checkDate(inputDate2);
+
+    </script>
+
+</body>
+</html>

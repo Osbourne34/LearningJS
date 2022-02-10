@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    
+    <script>
+
+        // 7) Найти максимальный элемент массива и его индекс (max_num и max_index).
+
+        var arr = [2,3,4,5,8,7,100,8,3];
+        var maxNum = 0;
+
+        for(num of arr) {
+            if(maxNum < num) {
+                maxNum = num;
+            }
+        }
+        console.log(`Индекс максимального числа: ${arr.indexOf(maxNum)}`);
+        console.log(`Максимальное число: ${maxNum}`);
+
+
+    </script>
+
+</body>
+</html>
