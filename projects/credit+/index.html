@@ -11,27 +11,25 @@
 
 <body>
 
-
     <div class="container">
         <form class="form">
-            <input type="text" id="sum" placeholder="Сумма">
-            <input type="text" id="term" placeholder="Срок кредита">
-            <input type="text" id="percent" placeholder="Процентная ставка в год">
+            <input value="5000" type="text" id="sum" placeholder="Сумма">
+            <input value="12" type="text" id="term" placeholder="Срок кредита">
+            <input value="10" type="text" id="percent" placeholder="Процентная ставка в год">
             <button id="button">Расчитать</button>
         </form>
         <table border="1">
             <tbody id="out">
                 <tr>
                     <th>Месяц</th>
-                    <th>Остаток по кредиту</th>
                     <th>Основной долг</th>
+                    <th>Сумма платежа</th>
                     <th>Проценты</th>
-                    <th>Сумма выплаты</th>
+                    <th>Остаток задолжности</th>
                 </tr>
             </tbody>
         </table>
     </div>
-
 
     <script src="script.js"></script>
 </body>

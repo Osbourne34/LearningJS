@@ -26,3 +26,7 @@ th,td {
     text-align: center;
     padding: 5px 15px;
 }
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}
