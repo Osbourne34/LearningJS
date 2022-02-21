@@ -9,52 +9,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ui-kit.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
+
     <div class="wrapper">
         <header class="header">
-            <div class="header__wrap">
-                <h1 class="header__title">ToDo-List</h1>
-                <form class="header__form" id="form">
-                    <input class="input input__date" type="date" id="date">
-                    <input class="input input__text" type="text" id="todo-value" placeholder="Todo">
-                    <label class="important">
-                        <input type="checkbox" id="important">
-                        <span class="important__text">Important</span>
-                    </label>
-                    <button class="button" type="submit">Add note</button>
-                </form>
-                <div class="header__account">
-                    <p>user</p>
-                </div>
+            <h1 class="header__title">TASKS</h1>
+            <form class="todolist-form" id="todo-form">
+                <input class="todolist-form__date" type="date" id="input-date">
+                <input class="todolist-form__input input input_gray" type="text" id="input-title" placeholder="Task">
+                <label class="todolist-form_important checkbox">
+                    <input class="checkbox__input" type="checkbox" id="important">
+                    <div class="checkbox__toggle"></div>
+                    <div class="checkbox__text">Important</div>
+                </label>
+                <input class="todolist-form_button button button_large button_fill" type="submit" value="Add task">
+            </form>
+            <div class="header__account">
+                <p>user</p>
             </div>
         </header>
-
         <main class="main">
             <aside class="sidebar">
-                <ul class="sidebar__list">
-                    <li class="sidebar__item">All tasks</li>
-                    <li class="sidebar__item">Category</li>
-                </ul>
+                
             </aside>
-            <div class="todo-list">
-                <div class="todo-list__search">
-                    <input class="input input__search" type="text" id="search" placeholder="Search">
+            <div class="todolist__tasks">
+                <div class="search">
+                    <input class="search__input input input_transparent" type="text" placeholder="Search">
                 </div>
-                <ul class="todo-list__todos" id="todo-list">
-                    <li class="todo-list__item">
-                        <div class="todo-list__left">
-                            <div class="todo-list__status"></div>
-                            <p class="todo-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quasi?</p>
+                <ul class="todolist__list">
+                    <!-- <li class="todolist__item">
+                        <div class="todolist__left">
+                            <div class="todolist__status todolist__status_important"></div>
+                            <p class="todolist__text">Lorem ipsum dolor sit amet quibusdam!</p>
                         </div>
-                        <div class="todo-list__right">
-                            <div class="todo-list__date">12.23.2302</div>
-                            <button class="button todo-list__delete-todo">Delete</button>
-                            <button class="button todo-list__edit-todo">Edit</button>
+                        <div class="todolist__right">
+                            <div class="todolist__date">20 12 2020</div>
+                            <button class="todolist__delete button button_large button_border">Delete</button>
+                            <button class="todolist__edit button button_large button_fill">Edit</button>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </main>
@@ -64,3 +61,30 @@
 </body>
 
 </html>
+
+
+
+
+<!-- <button class="button button_small button_fill">small</button>
+<button class="button button_small button_border">small</button>
+<button class="button button_small button_gray">small</button>
+<br>
+<br>
+<button class="button button_large button_fill">large</button>
+<button class="button button_large button_border">large</button>
+<button class="button button_large button_gray">large</button>
+<br>
+<br>
+<input type="text" class="input input_transparent" placeholder="search">
+<input type="text" class="input input_gray" placeholder="search">
+<input type="text" class="input input_transparent input_error" placeholder="search">
+<input type="text" class="input input_gray input_error" placeholder="search">
+<input type="password" class="input input_transparent" placeholder="search">
+<input type="password" class="input input_gray" placeholder="search">
+<br>
+<br>
+<label class="checkbox">
+    <input class="checkbox__input" type="checkbox">
+    <div class="checkbox__toggle"></div>
+    <div class="checkbox__text">important</div>
+</label> -->
