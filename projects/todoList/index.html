@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: #000;
-            color: #fff;
-        }
-        ul, li {
-            list-style: none;
-        }
-        .todo-item {
-            display: flex;
-        }
-        input:disabled {
-            background-color: transparent;
-            border: none;
-            color: inherit;
-        }
-    </style>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__wrap">
+                <h1 class="header__title">ToDo-List</h1>
+                <form class="header__form" id="form">
+                    <input class="input input__date" type="date" id="date">
+                    <input class="input input__text" type="text" id="todo-value" placeholder="Todo">
+                    <label class="important">
+                        <input type="checkbox" id="important">
+                        <span class="important__text">Important</span>
+                    </label>
+                    <button class="button" type="submit">Add note</button>
+                </form>
+                <div class="header__account">
+                    <p>user</p>
+                </div>
+            </div>
+        </header>
 
-    <input id="input" type="text" placeholder="Задача">    
-    <button id="add-btn">Добавить задачу</button>
+        <main class="main">
+            <aside class="sidebar">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">All tasks</li>
+                    <li class="sidebar__item">Category</li>
+                </ul>
+            </aside>
+            <div class="todo-list">
+                <div class="todo-list__search">
+                    <input class="input input__search" type="text" id="search" placeholder="Search">
+                </div>
+                <ul class="todo-list__todos" id="todo-list">
+                    <li class="todo-list__item">
+                        <div class="todo-list__left">
+                            <div class="todo-list__status"></div>
+                            <p class="todo-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quasi?</p>
+                        </div>
+                        <div class="todo-list__right">
+                            <div class="todo-list__date">12.23.2302</div>
+                            <button class="button todo-list__delete-todo">Delete</button>
+                            <button class="button todo-list__edit-todo">Edit</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
 
-    <ul class="todo-list">
-
-    </ul>
-
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
