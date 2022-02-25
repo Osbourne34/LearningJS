@@ -1,0 +1,37 @@
+body {
+    background-color: var(--color-grayBg);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.sign-up__form {
+    width: 500px;
+    padding: 30px;
+    background-color: var(--color-light);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+.sign-up__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sign-up__input {
+    width: 100%;
+}
+.sign-up__input + .sign-up__input {
+    margin-top: 20px;
+}
+.sign-up__link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+.sign-up__button {
+    width: 100%;
+    margin-top: 40px;
+}

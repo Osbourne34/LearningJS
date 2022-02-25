@@ -33,6 +33,10 @@ ul, li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 input, button {
     font-family: inherit;
     font-size: inherit;
@@ -192,4 +196,12 @@ button {
 }
 .checkbox__text {
     font-size: 20px;
+}
+
+.link {
+    color: var(--color-blue);
+    font-weight: 500;
+}
+.link:hover {
+    text-decoration: underline;
 }
