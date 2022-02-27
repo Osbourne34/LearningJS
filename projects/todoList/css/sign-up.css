@@ -18,7 +18,7 @@ body {
 }
 .sign-up__title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .sign-up__input {
     width: 100%;
@@ -33,5 +33,10 @@ body {
 }
 .sign-up__button {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.auth-form__have-an-account {
+    margin-bottom: 15px;
+    text-align: center;
 }

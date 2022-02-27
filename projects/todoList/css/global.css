@@ -23,23 +23,19 @@
     transform: translateX(-50%) translateY(-50%);
     margin: 0 30px;
 }
+
 .todolist-form__date {
     margin-right: 30px;
     padding: 10px 19px;
-    border: 1px solid transparent;
+    border-width: 1px;
+    border-style: solid;
     border-radius: 5px;
     background-color: var(--color-grayBg);
-
     line-height: 20px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
-.todolist-form__date:active {
-    border: 1px solid var(--color-dark);
-}
-.todolist-form__date:focus {
-    border: 1px solid var(--color-dark);
-}
+
 .todolist-form_important {
     margin: 0 40px;
 }
@@ -113,4 +109,62 @@
 }
 .todolist__edit {
     margin-left: 30px;
+}
+
+.account {
+    position: relative;
+}
+
+.account__user {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--color-blue);
+    cursor: pointer;
+}
+.account__user:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    background-image: url("./../icons/user.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.account__user:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 3px;
+    background-image: url("./../icons/arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+}
+.account__user.rotate-arrow:after {
+    transform: rotate(180deg);
+}
+
+.account__dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-light);
+    box-shadow: var(--shadow);
+}
+.account__dropdown-item {
+    cursor: pointer;
+}
+.account__dropdown-item:hover {
+    color: var(--color-red);
+}
+.account__dropdown.open {
+    display: block;
 }

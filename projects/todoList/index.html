@@ -28,30 +28,25 @@
                 </label>
                 <input class="todolist-form_button button button_large button_fill" type="submit" value="Add task">
             </form>
-            <div class="header__account">
-                <p>user</p>
+            <div class="header__account account">
+                <div class="account__user">user</div>
+                <div class="account__dropdown">
+                    <ul class="account__dropdown-list">
+                        <li class="account__dropdown-item" id="logout">Logout</li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main class="main">
             <aside class="sidebar">
-                
+
             </aside>
             <div class="todolist__tasks">
                 <div class="search">
                     <input class="search__input input input_transparent" type="text" placeholder="Search">
                 </div>
                 <ul class="todolist__list">
-                    <!-- <li class="todolist__item">
-                        <div class="todolist__left">
-                            <div class="todolist__status todolist__status_important"></div>
-                            <p class="todolist__text">Lorem ipsum dolor sit amet quibusdam!</p>
-                        </div>
-                        <div class="todolist__right">
-                            <div class="todolist__date">20 12 2020</div>
-                            <button class="todolist__delete button button_large button_border">Delete</button>
-                            <button class="todolist__edit button button_large button_fill">Edit</button>
-                        </div>
-                    </li> -->
+
                 </ul>
             </div>
         </main>

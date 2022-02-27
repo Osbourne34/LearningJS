@@ -145,9 +145,6 @@ button {
 .input_gray {
     background-color: var(--color-grayBg);
 }
-.input_error {
-    border-color: var(--color-red);
-}
 
 .input_transparent:focus {
     border-color: var(--color-dark);
@@ -162,8 +159,18 @@ button {
 .input_gray:active {
     border-color: var(--color-dark);
 }
-
-
+.todolist-form__date {
+    border-color: transparent;
+}
+.todolist-form__date:active {
+    border-color: var(--color-dark);
+}
+.todolist-form__date:focus {
+    border-color: var(--color-dark);
+}
+.input_error {
+    border-color: var(--color-red);
+}
 .input_error:focus {
     border-color: var(--color-red);
 }

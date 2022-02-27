@@ -9,7 +9,7 @@ export class Routing {
                 location.href = './auth.html';
             }
         } else {
-            if(location.pathname.includes('auth.html')) {
+            if(location.pathname.includes('auth.html') || location.pathname.includes('sign-up.html')) {
                 location.href = './index.html';
             }
         }
