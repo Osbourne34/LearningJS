@@ -37,7 +37,6 @@ export class DeleteTask {
                 }
             })
             localStorage.setItem('users', JSON.stringify(users));
-
             users.find(item => {
                 if (item.login === user) {
                     this.renderTasks(item.tasks);

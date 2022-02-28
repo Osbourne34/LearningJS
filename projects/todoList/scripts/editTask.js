@@ -45,25 +45,17 @@ export class EditTask {
 
     editStatus = (event) => {
         const target = event.target.closest('li');
-        // localStorage.setItem('lastStatus', '');
+
         if (event.target.classList.contains('todolist__status')) {
             const id = target.dataset.id;
             const user = JSON.parse(localStorage.getItem('user'));
             const users = JSON.parse(localStorage.getItem('users'));
 
-            const currentUser = users.find(item => {
-                return item.login === user;
-            });
-
             users.map(item => {
                 if (item.login === user) {
                     if (item.tasks[id]) {
                         if (item.tasks[id].statusTask === 'important' || item.tasks[id].statusTask === 'process') {
-                            localStorage.setItem('lastStatus', item.tasks[id].statusTask);
                             item.tasks[id].statusTask = 'done';
-                        } else {
-                            
-                            item.tasks[id].statusTask = localStorage.getItem('lastStatus');
                         }
                     }
                 }
