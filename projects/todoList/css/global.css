@@ -93,9 +93,21 @@
     width: 15px;
     height: 15px;
     flex-shrink: 0;
-    background-color: var(--color-red);
     border-radius: 50%;
     margin-right: 20px;
+    cursor: pointer;
+}
+.todolist__status_important {
+    background-color: var(--color-red);
+}
+.todolist__status_done {
+    background-color: #198754;
+}
+.todolist__status_process {
+    background-color: #ffc107;
+}
+.todolist__status_done + .todolist__text {
+    text-decoration: line-through;
 }
 .todolist__text {
     font-size: 18px;
@@ -167,4 +179,45 @@
 }
 .account__dropdown.open {
     display: block;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal.close {
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    padding: 25px;
+    background-color: var(--color-light);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+.modal .todolist-form__date {
+    margin-right: 0;
+}
+.modal input {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.modal__form-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

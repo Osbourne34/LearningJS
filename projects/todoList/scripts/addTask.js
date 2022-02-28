@@ -15,14 +15,14 @@ export class AddTask {
 
         const html = arr.map((item, index) => {
             return `
-                <li class="todolist__item">
+                <li data-id="${index}" class="todolist__item" >
                     <div class="todolist__left">
-                        <div class="todolist__status todolist__status_important"></div>
+                        <div class="todolist__status todolist__status_${item.statusTask}"></div>
                         <p class="todolist__text">${item.task}</p>
                     </div>
                     <div class="todolist__right">
                         <div class="todolist__date">${item.date}</div>
-                        <button data-id="${index}" class="todolist__delete button button_large button_border">Delete</button>
+                        <button class="todolist__delete button button_large button_border">Delete</button>
                         <button class="todolist__edit button button_large button_fill">Edit</button>
                     </div>
                 </li> 
@@ -36,7 +36,7 @@ export class AddTask {
         event.preventDefault();
         if (this.date.value !== '' && this.title.value !== '') {
             let users = JSON.parse(localStorage.getItem('users'));
-            const task = new Task(this.date.value, this.title.value, this.important.checked, false);
+            const task = new Task(this.date.value, this.title.value, this.important.checked ? 'important' : 'process');
 
             users.map(item => {
                 if (item.login === this.currentUser) {

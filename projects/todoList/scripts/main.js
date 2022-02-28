@@ -5,6 +5,7 @@ import { Logout } from "./logout.js";
 import { SetUserName } from "./setUserName.js";
 import { AddTask } from "./addTask.js";
 import { DeleteTask } from "./deleteTask.js";
+import { EditTask } from "./editTask.js";
 
 IsLogged.init();
 Routing.init();
@@ -22,3 +23,5 @@ const addTask = new AddTask('todo-form', 'input-date', 'input-title', 'important
 addTask.init();
 
 const deleteTask = new DeleteTask('.todolist__list');
+
+const editTask = new EditTask('modal-date', 'modal-task', 'modal', 'modal-form', '.todolist__list');
