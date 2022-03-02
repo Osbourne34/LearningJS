@@ -1,6 +1,7 @@
 export class Search {
-    constructor(searchInput) {
+    constructor(searchInput, todoListContainer) {
         this.searchInput = document.querySelector(searchInput);
+        this.todoListContainer = document.querySelector(todoListContainer);
         this.init();
     }
 
@@ -25,5 +26,6 @@ export class Search {
 
     init() {
         this.searchInput.addEventListener('input', this.search);
+        document.addEventListener('DOMSubtreeModified', this.search);
     }
 }

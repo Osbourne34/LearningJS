@@ -27,4 +27,4 @@ const deleteTask = new DeleteTask('.todolist__list');
 
 const editTask = new EditTask('modal-date', 'modal-task', 'modal', 'modal-form', '.todolist__list');
 
-const search = new Search('.search__input');
+const search = new Search('.search__input', '.todolist__list');

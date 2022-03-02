@@ -1,5 +1,5 @@
 export class EditTask {
-    constructor(date, title, modal, modalForm, todoList) {
+    constructor(date, title, modal, modalForm, todoList, taskText, taskDate) {
         this.date = document.getElementById(date);
         this.title = document.getElementById(title);
         this.modal = document.getElementById(modal);
@@ -91,7 +91,6 @@ export class EditTask {
                 this.title.classList.remove('input_error');
                 this.date.classList.remove('input_error');
             }
-
         }
     }
 
@@ -129,11 +128,11 @@ export class EditTask {
 
         localStorage.setItem('users', JSON.stringify(users));
 
-        users.find(item => {
-            if (item.login === user) {
-                this.renderTasks(item.tasks);
-            }
-        })
+        const taskText = document.querySelectorAll('.todolist__text');
+        const taskDate = document.querySelectorAll('.todolist__date');
+
+        taskText[this.id].innerHTML = this.title.value;
+        taskDate[this.id].innerHTML = this.date.value;
 
     }
 
