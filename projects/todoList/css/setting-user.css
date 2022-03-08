@@ -1,0 +1,40 @@
+body {
+    background-color: var(--color-grayBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.setting-user__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--color-light);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+}
+.setting-user__input {
+    width: 400px;
+    margin-top: 5px;
+}
+.setting-user__label {
+    margin-top: 25px;
+}
+
+.setting-user__generate-password .checkbox__text {
+    font-size: 12px;
+}
+.setting-user__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+.setting-user__save {
+    cursor: pointer;
+}
+.setting-user__exit,
+.setting-user__save {
+    width: 150px;
+}

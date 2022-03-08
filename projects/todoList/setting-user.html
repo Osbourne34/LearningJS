@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting-user</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ui-kit.css">
+    <link rel="stylesheet" href="css/setting-user.css">
+</head>
+<body>
+
+    <form class="setting-user setting-user__form">
+        <h1 class="setting-user__title">Settings</h1>
+
+        <label class="setting-user__label">
+            <p class="setting-user__label-text">Login</p>
+            <input id="login" type="text" class="setting-user__input input input_gray" placeholder="Login">
+        </label>
+        <label class="setting-user__label">
+            <p class="setting-user__label-text">Password</p>
+            <input id="password" type="password" class="setting-user__input input input_gray" placeholder="Password">
+        </label>
+        <label class="setting-user__label">
+            <p class="setting-user__label-text">Confirm Password</p>
+            <input id="confirm-password" type="password" class="setting-user__input input input_gray" placeholder="Confirm Password">
+        </label>
+
+        <div class="setting-user__btns">
+            <button type="button" class="setting-user__generate-password button button_large button_fill">Generate</button>
+            <label class="setting-user__show-password checkbox">
+                <input class="checkbox__input" type="checkbox" id="important">
+                <div class="checkbox__toggle"></div>
+                <div class="checkbox__text">Show password</div>
+            </label>
+        </div>
+        <div class="setting-user__btns">
+            <button type="button" class="setting-user__exit button button_large button_border">Exit</button>
+            <input type="submit" value="Save" class="setting-user__save button button_large button_fill">
+        </div>
+    </form>
+
+    <script type="module" src="./scripts/setting-user.js"></script>
+</body>
+</html>

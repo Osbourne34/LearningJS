@@ -17,10 +17,6 @@
 .todolist-form {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     margin: 0 30px;
 }
 
@@ -42,6 +38,16 @@
 .todolist-form__input {
     width: 400px;
 }
+@media(max-width: 1400px) {
+    .todolist-form__input {
+        width: 300px;
+    }
+}
+@media(max-width: 1300px) {
+    .todolist-form__input {
+        width: 220px;
+    }
+}
 .todolist-form_button {
     cursor: pointer;
 }
@@ -52,13 +58,41 @@
 }
 .sidebar {
     width: 100%;
-    max-width: 220px;
+    max-width: 250px;
 }
-.todolist__tasks {
+.todolist__tasks,
+.category {
     width: 100%;
     padding: 0 40px 30px;
     background-color: var(--color-grayBg);
 }
+
+.category {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.category-item {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+.category-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.category-container {
+    padding: 10px;
+    background-color: #fff;
+    flex-grow: 1;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    border: 1px solid transparent;
+    transition: .2s;
+}
+
 .search {
     display: flex;
     justify-content: center;
@@ -83,6 +117,11 @@
 }
 .todolist__left {
     width: 60%;
+}
+@media(max-width: 1400px) {
+    .todolist__left {
+        width: 50%;
+    }
 }
 .todolist__left,
 .todolist__right {
@@ -119,6 +158,7 @@
     margin-left: 30px;
     margin-right: 40px;
 }
+
 .todolist__edit {
     margin-left: 30px;
 }
@@ -220,4 +260,71 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.tabs-item {
+    padding: 20px;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+.tabs-item:hover {
+    background-color:var(--color-grayBg);
+}
+.tabs-item.active {
+    background-color: var(--color-red);
+    color: var(--color-light);
+    font-weight: 700;
+}
+
+.task {
+    padding: 15px;
+    background-color: var(--color-grayBg);
+    border-radius: 5px;
+    cursor: all-scroll;
+}
+.task + .task {
+    margin-top: 15px;
+}
+.task__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.task__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 1400px) {
+    .task__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.task__buttons {
+    display: flex;
+}
+@media(max-width: 1400px) {
+    .task__buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+.task_button-delete {
+    margin-right: 15px;
+}
+@media(max-width: 1400px) {
+    .task__date {
+        margin-bottom: 10px;
+    }
+}
+.hide {
+    display: none;
+}
+.hovered {
+    border: 1px solid var(--color-dark);
+}
+
+.account__dropdown-item + .account__dropdown-item {
+    margin-top: 15px;
 }

@@ -87,10 +87,22 @@ export class EditTask {
             this.title.value = currentUser.tasks[this.id].task;
             this.date.value = currentUser.tasks[this.id].date;
 
-            if (this.title.classList.contains('input_error') || this.date.classList.contains('input_error')) {
-                this.title.classList.remove('input_error');
-                this.date.classList.remove('input_error');
-            }
+        }
+        const targetCategoriesTask = event.target.closest('.task');
+        if (event.target.classList.contains('task_button-edit')) {
+            this.id = targetCategoriesTask.dataset.id;
+            this.showModal();
+
+            const user = JSON.parse(localStorage.getItem('user'));
+            const users = JSON.parse(localStorage.getItem('users'));
+
+            const currentUser = users.find(item => {
+                return item.login === user;
+            });
+
+            this.title.value = currentUser.tasks[this.id].task;
+            this.date.value = currentUser.tasks[this.id].date;
+
         }
     }
 
@@ -133,6 +145,16 @@ export class EditTask {
 
         taskText[this.id].innerHTML = this.title.value;
         taskDate[this.id].innerHTML = this.date.value;
+        console.log(this.id);
+
+        const tasks = document.querySelectorAll('.task');
+
+        tasks.forEach(task => {
+            if(task.dataset.id === this.id) {
+                task.querySelector('.task__title').innerHTML = this.title.value;
+                task.querySelector('.task__date').innerHTML = this.date.value;
+            }
+        })
 
     }
 

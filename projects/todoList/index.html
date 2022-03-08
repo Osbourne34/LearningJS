@@ -32,6 +32,7 @@
                 <div class="account__user"></div>
                 <div class="account__dropdown">
                     <ul class="account__dropdown-list">
+                        <li class="account__dropdown-item" id="settings">Settings</li>
                         <li class="account__dropdown-item" id="logout">Logout</li>
                     </ul>
                 </div>
@@ -39,7 +40,10 @@
         </header>
         <main class="main">
             <aside class="sidebar">
-
+                <ul class="tabs">
+                    <li class="tabs-item active">All tasks</li>
+                    <li class="tabs-item">Category</li>
+                </ul>
             </aside>
             <div class="todolist__tasks">
                 <div class="search">
@@ -48,6 +52,26 @@
                 <ul class="todolist__list">
 
                 </ul>
+            </div>
+            <div class="category">
+                <div class="category-item">
+                    <div class="category-title">Process</div>
+                    <div class="category-container" id="process-container">
+
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Important</div>
+                    <div class="category-container" id="important-container">
+
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Done</div>
+                    <div class="category-container" id="done-container">
+
+                    </div>
+                </div>
             </div>
         </main>
     </div>
