@@ -63,8 +63,13 @@ export class SettingUser {
         });
 
         if (this.settingUserLogin.value.trim() !== '' && this.settingUserPassword.value.trim() !== '' && this.settingUserConfirmPassword.value.trim() !== '') {
-            for (let user of users) {
-                if (user.login === this.settingUserLogin.value) {
+            const notUser = users.filter(item => {
+                if(item.login !== user) {
+                    return item;
+                }
+            })
+            for(let user of notUser) {
+                if(user.login === this.settingUserLogin.value) {
                     this.settingUserLogin.classList.add('input_error');
                     return;
                 } else {
@@ -93,11 +98,22 @@ export class SettingUser {
         }
     }
 
+    generatePassword = () => {
+        let password = "";
+        const symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!№%?*()_+=";
+        for (let i = 0; i < 10; i++) {
+            password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+        }
+        this.settingUserPassword.value = password;
+        this.settingUserConfirmPassword.value = password;
+    }
+
     init() {
         this.setInputValue();
         this.settingUserShowPassword.addEventListener('click', this.showPassword);
         this.settingUserExitBtn.addEventListener('click', this.exitSettings);
         this.settingUserForm.addEventListener('submit', this.submitForm);
+        this.settingUserGeneratePassword.addEventListener('click', this.generatePassword);
     }
 }
 
