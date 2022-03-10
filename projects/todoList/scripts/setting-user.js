@@ -73,7 +73,6 @@ export class SettingUser {
                 }
             }
 
-
             if (this.settingUserPassword.value === this.settingUserConfirmPassword.value) {
                 currentUser.password = this.settingUserPassword.value;
                 this.settingUserPassword.classList.remove('input_error');
@@ -85,6 +84,7 @@ export class SettingUser {
             }
 
             localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('user', JSON.stringify(this.settingUserLogin.value));
 
         } else {
             if (this.settingUserLogin.value === '') {
