@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+.wrapper {
+
+}
+.auth {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #1B1B1B;
+}
+.input {
+    font-size: 16px;
+
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    outline: none;
+}
+.auth-btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+
+    padding: 10px 15px;
+    background-color: #6493E9;
+    border-radius: 5px;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.chat {
+    width: 500px;
+    background-color: #1B1B1B;
+    padding: 10px;
+}
+.title {
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+
+    margin-bottom: 20px;
+}
+.window-chat {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+    background-color: #111111;
+}
+.window-chat::-webkit-scrollbar {
+    width: 10px;
+}
+.window-chat::-webkit-scrollbar-thumb {
+    background-color: #545454;
+    border-radius: 5px;
+}
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #111111;
+}
+.message:nth-child(odd) {
+    background-color: #282828;
+}
+
+.message__time {
+    color: #5B5E5F;
+}
+.message__user-name {
+    color: #A7BD9A;
+    font-weight: 700;
+    margin: 0 15px;
+}
+.message__value {
+    color: #fff;
+}
+.textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: #080808;
+    resize: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 10px;
+}
+.textarea::-webkit-scrollbar-thumb {
+    background-color: #545454;
+    border-radius: 5px;
+}
+
+.send {
+    transform: translateX(calc(480px - 100%));
+    background-color: #5D319B;
+    border-radius: 5px;
+
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
