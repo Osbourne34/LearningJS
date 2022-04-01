@@ -1,9 +1,26 @@
 import { databaseEntry } from './database-entry.js';
 import Products from './Products.js';
+import Basket from './Basket.js';
+import Auth from './Auth.js';
+import Userbar from './Userbar.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Запись исходных данных в базу данных;
     databaseEntry();
 
-    new Products('products', 'load-more', 12);
+    // Отображение продуктов
+    const products = new Products('products', 'load-more', 'categories', 12);
+    products.init();
+
+    // Корзина
+    const basket = new Basket('basket-btn', 'basket-list', 'basket-btn', 'basket-dropdown', 'basket-numbers');
+    basket.init();
+
+    //Авторизация
+    const auth = new Auth();
+    auth.init();
+
+    //Userbar
+    const userbar = new Userbar('user-bar');
+    userbar.init();
 })

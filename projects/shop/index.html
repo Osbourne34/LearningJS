@@ -20,40 +20,35 @@
                     <h1>Shop</h1>
                 </div>
 
-                <div class="col-auto">
-                    <ul class="user-bar d-flex">
-                        <li class="user-bar__item">
-                            <button class="btn btn-primary user-bar__item">Sign in</button>
-                        </li>
-                        <li class="user-bar__item">
-                            <button class="btn btn-outline-primary user-bar__item">Sign up</button>
-                        </li>
-                        <li class="user-bar__item">
-                            <button class="btn btn-primary position-relative">
-                                <span class="position-absolute top-0 start-100 translate-middle badge bg-danger">
-                                    0
-                                </span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-cart2" viewBox="0 0 16 16">
-                                    <path
-                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
+                <div class="col-auto d-flex">
+                    <ul class="user-bar d-flex" id="user-bar"></ul>
+                    <div class="basket" id="basket">
+                        <button id="basket-btn" class="basket__btn btn btn-primary position-relative">
+                            <span id="basket-numbers" class="position-absolute top-0 start-100 translate-middle badge bg-danger">
+                                0
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-cart2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                            </svg>
+                        </button>
+                        <div class="basket__dropdown" id="basket-dropdown">
+                            <ul id="basket-list" class="basket__list"></ul>
+                            <div class="basket__buttons">
+                                <button class="btn btn-danger">Clear cart</button>
+                                <button class="btn btn-success">Buy items</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </header>
     <main class="main">
         <div class="container-xxl">
             <div class="row justify-content-center">
-                <div class="categories-list col-auto d-flex">
-                    <button class="btn btn-outline-primary categories-item">All</button>
-                    <button class="btn btn-outline-primary categories-item">smartphone</button>
-                    <button class="btn btn-outline-primary categories-item">blaa blaa</button>
-                    <button class="btn btn-outline-primary categories-item">duxi</button>
+                <div class="categories-list col-auto d-flex" id="categories">
                 </div>
             </div>
         </div>
@@ -67,9 +62,30 @@
         </div>
     </main>
 
+    <!-- Modal -->
+    <div class="my-modal" id="modal">
+        <div class="my-modal__dialog">
+            <div class="my-modal__dialog-head">
+                <button class="btn btn-sm" id="modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                        <path fill-rule="evenodd"
+                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="my-modal__dialog-body">
+                <h5>You must be logged in to add an item to your shopping cart.</h5>
+            </div>
+            <div class="my-modal__dialog-footer">
+                <a class="btn btn-primary" href="login.html">Sign in</a>
+                <a class="btn btn-secondary" href="register.html">Register</a>
+            </div>
+        </div>
 
-    <script src="script/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="module" src="script/main.js"></script>
+        <script type="module" src="script/main.js"></script>
 </body>
 
 </html>

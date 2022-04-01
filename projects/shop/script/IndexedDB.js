@@ -56,7 +56,7 @@ export default class IndexedDB {
             let tx = db.transaction(storeName, 'readwrite');
             let store = tx.objectStore(storeName);
 
-            let req = store.put(data);
+            let req = store.add(data);
 
             req.onsuccess = function (e) {
                 res(e.target.result);
@@ -129,6 +129,24 @@ export default class IndexedDB {
             let store = tx.objectStore(storeName);
 
             let req = store.clear();
+
+            req.onsuccess = function (e) {
+                res(e.target.result);
+            }
+            req.onerror = function (err) {
+                rej(err);
+            }
+        })
+    }
+
+    static async editing (storeName, data) {
+        const db = await this.init();
+
+        return new Promise((res, rej) => {
+            let tx = db.transaction(storeName, 'readwrite');
+            let store = tx.objectStore(storeName);
+
+            let req = store.put(data);
 
             req.onsuccess = function (e) {
                 res(e.target.result);
