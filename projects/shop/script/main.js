@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     products.init();
 
     // Корзина
-    const basket = new Basket('basket-btn', 'basket-list', 'basket-btn', 'basket-dropdown', 'basket-numbers');
+    const basket = new Basket('basket-btn', 'basket-dropdown', 'basket-list', 'basket-amount', 'total-price', 'basket-clear-all');
     basket.init();
 
     //Авторизация
-    const auth = new Auth();
+    const auth = new Auth('user-bar');
     auth.init();
 
     //Userbar

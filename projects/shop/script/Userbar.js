@@ -1,4 +1,4 @@
-export default class Userbas {
+export default class Userbar {
     constructor(userbar) {
         this.userbar = document.getElementById(userbar);
     }
@@ -8,6 +8,10 @@ export default class Userbas {
             <li class="user-bar__item">
                 <button class="btn btn-primary">Cabinet</button>
             </li>
+            <li class="user-bar__item" id="logout">
+                <button class="btn btn-outline-primary">Logout</button>
+            </li>
+            
         `
     }
 

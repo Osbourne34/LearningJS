@@ -1,0 +1,29 @@
+.main {
+    padding: 30px;
+}
+.product-photo {
+    display: flex;
+    justify-content: space-between;
+}
+.product-photos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.product-photo-item {
+    border: 1px solid #ccc;
+}
+.product-photo-item + .product-photo-item {
+    margin-top: 15px;
+}
+.product-photo-item img{
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+.product-photo-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
