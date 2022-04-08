@@ -3,6 +3,7 @@ import Products from './Products.js';
 import Basket from './Basket.js';
 import Auth from './Auth.js';
 import Userbar from './Userbar.js';
+import ProductIdRecord from './productIdRecord.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Запись исходных данных в базу данных;
@@ -23,4 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //Userbar
     const userbar = new Userbar('user-bar');
     userbar.init();
+
+    //ProductIdRecord
+    const productIdRecord = new ProductIdRecord();
+    productIdRecord.init();
 })

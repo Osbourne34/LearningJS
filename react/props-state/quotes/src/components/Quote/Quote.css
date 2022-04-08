@@ -1,0 +1,40 @@
+.quote {
+    width: 100%;
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.quote__head {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+.quote__double-quote {
+    position: absolute;
+    top: -12px;
+    left: -5px;
+    font-size: 80px;
+    line-height: 1;
+}
+.quote__text {
+    margin-left: 35px;
+}
+.quote__author {
+    margin-top: 20px;
+    text-align: end;
+}
+.quote__next-btn {
+    margin-top: 20px;
+    padding: 8px 15px;
+    border-radius: 3px;
+
+    border: none;
+    outline: none;
+
+    font-size: inherit;
+    color: #fff !important;
+
+    cursor: pointer;
+}

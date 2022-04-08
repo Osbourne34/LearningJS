@@ -1,0 +1,25 @@
+.post {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.post.light {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #000;
+}
+.post.dark {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+.post__title {
+    margin-bottom: 10px;
+}
+.post__text {
+    margin-bottom: 10px;
+}
+.post__checkbox {
+    margin-right: 5px;   
+}

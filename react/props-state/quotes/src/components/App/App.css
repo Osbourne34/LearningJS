@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: .5s;
+}
+
+.app--brown,
+.app--brown .quote__next-btn {
+    background-color: #362423;
+    color: #362423;
+}
+.app--violet,
+.app--violet .quote__next-btn {
+    background-color: #9E64B8;
+    color: #9E64B8;
+}
+.app--yellow,
+.app--yellow .quote__next-btn {
+    background-color: #FB9B0D;
+    color: #FB9B0D;
+}
+.app--orange,
+.app--orange .quote__next-btn {
+    background-color: #F55B3A;
+    color: #F55B3A;
+}
+.app--burgundy,
+.app--burgundy .quote__next-btn {
+    background-color: #493031;
+    color: #493031;
+}
+.app--darkblue,
+.app--darkblue .quote__next-btn {
+    background-color: #2B3E50;
+    color: #2B3E50;
+}

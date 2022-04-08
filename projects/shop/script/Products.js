@@ -56,7 +56,7 @@ export default class Products {
                 return `
                 <div data-id="${product.id}" class="col-3 product">
                     <div class="product__body">
-                        <a class="product__link" href="#">
+                        <a class="product__link" href="./product.html">
                             <img class="product__photo" src="${product.thumbnail}" alt="${product.title}">
                             <div class="product__info">
                                 <div class="product__brand bg-secondary">${product.brand}</div>

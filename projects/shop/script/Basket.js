@@ -35,7 +35,7 @@ export default class Basket {
             const html = basket.map(product => {
                 return `
                         <li data-id="${product.id}" class="basket__product">
-                            <a href="#" class="basket__product-left">
+                            <a href="./product.html" class="basket__product-link">
                                 <img src="${product.thumbnail}" alt="${product.title}"
                                     class="basket__product-photo">
                                 <div class="basket__product-info">
@@ -84,7 +84,6 @@ export default class Basket {
         currentUser.basket.length = 0;
 
         this.writeChanges('users', currentUser);
-        console.log(currentUser);
     }
 
     async totalPrice() {
@@ -169,6 +168,7 @@ export default class Basket {
         document.addEventListener('click', async (event) => {
             // Кнопка добавление в корзину у продукта.
             const targetProductBasketBtn = event.target.closest('.product__btn');
+            const targetProductAddFromBasket = event.target.closest('.product__button-add');
             const isLogged = JSON.parse(localStorage.getItem('isLogged'));
 
             const product = event.target.closest('.product');
@@ -176,6 +176,18 @@ export default class Basket {
             if (targetProductBasketBtn) {
                 if (isLogged) {
                     const productID = +product.dataset.id;
+                    await this.addProductToBasket(productID);
+                    await this.render();
+                    await this.amountBasket();
+                    await this.totalPrice();
+                } else {
+                    modal.modalOpen();
+                }
+            }
+
+            if(targetProductAddFromBasket) {
+                if (isLogged) {
+                    const productID = +sessionStorage.getItem('id');
                     await this.addProductToBasket(productID);
                     await this.render();
                     await this.amountBasket();
@@ -206,7 +218,7 @@ export default class Basket {
             }
         })
 
-        document.addEventListener('change', async (event) => {
+        this.basketList.addEventListener('change', async (event) => {
             // Счетчик товара в корзине.
             const basketCounterAmount = +event.target.closest('.basket__product-number').value;
             const basketProductID = +event.target.closest('.basket__product').dataset.id;

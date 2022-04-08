@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.app {
+    max-width: 400px;
+    padding: 20px;
+}
