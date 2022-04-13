@@ -1,24 +1,28 @@
 import React, { useState, useMemo } from "react";
 
 function UseMemoOne() {
-    const [num, setNum] = useState(0);
+    const [value, setValue] = useState(0);
 
-    const factorial = (n) => {
-        return n ? n * factorial(n - 1) : 1;
+    const factorial = (num) => {
+        let res = 1;
+        if (num <= 0) {
+            return 0;
+        } else {
+            for (let i = 1; i <= num; i++) {
+                res = res * i;
+            }
+        }
+        return res;
     }
 
-    const factorialMemo = useMemo(() => {
-        return factorial(num);
-    }, [num]);
-
-    const onInputHandler = (e) => {
-        setNum(e.target.value);
-    }
+    const factorailMemo = useMemo(() => {
+        return factorial(value);
+    }, [value]);
 
     return (
         <div>
-            <input onChange={onInputHandler} value={num} type="text" />
-            <p>The factorial of {num} is {factorialMemo}</p>
+            <input onChange={(e) => setValue(e.target.value)} value={value} type="number" />
+            <p>Факториал числа {value} равен {factorailMemo}</p>
         </div>
     )
 }
