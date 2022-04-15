@@ -1,0 +1,26 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+.box {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 50px;
+    background-color: brown;
+    transition: .3s;
+}
+.box:before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+}
+input{
+    margin-bottom: 15px;
+}

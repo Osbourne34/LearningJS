@@ -1,0 +1,11 @@
+.wrap {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-left: 5px;
+    padding: 0 5px;
+}
