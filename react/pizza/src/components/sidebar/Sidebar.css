@@ -1,0 +1,14 @@
+.sidebar__head {
+    margin-bottom: 15px;
+}
+
+.sidebar__head-price {
+    font-size: 16px;
+}
+
+.sidebar .my-modal__content {
+    width: 400px;
+}
+.sidebar .my-modal input {
+    margin-right: 15px;
+}

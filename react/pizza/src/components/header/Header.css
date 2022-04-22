@@ -1,0 +1,17 @@
+.header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header__link {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.header__link.active,
+.header__link:hover,
+.header__link:focus {
+    color: var(--bs-gray-500);
+}
