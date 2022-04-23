@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+ul, li {
+    padding: 0;
+    list-style: none;
+}
+
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb__item {
+    display: flex;
+    align-items: center;
+}
+.breadcrumb__item:after {
+    content: '/';
+    margin: 0 5px;
+}
+.breadcrumb__item:last-child:after {
+    display: none;
+}
+
+.breadcrumb__link {
+    color: blue;
+    text-decoration: underline;
+}
