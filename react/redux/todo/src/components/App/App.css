@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: 100%;
+
+    background-color: transparent;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+.container {
+    max-width: 730px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.list {
+    max-height: 100%;
+    overflow: auto;
+    margin-top: 30px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+}  
+.form .input {
+    border-radius: 5px 0 0 5px;
+}
+.form .button {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input:focus {
+    border-color: #282828;
+}
+
+.button {
+    padding: 10px 12px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.button:hover,
+.button:focus {
+    background-color: #282828;
+    border-color: #282828;
+    color: #fff;
+}
+.button:active {
+    border-color: rgba(40, 40, 40, 0);
+    background-color: rgba(40, 40, 40, 0.9);
+}
+
+.empty {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+
+    font-size: 24px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.list-item:last-child {
+    border-bottom: none;
+}
+.list-item:hover {
+    background-color: rgba(204, 204, 204, 0.2);
+}
+.list-item:hover .list-item__button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.list-item__inner {
+    flex-grow: 1;
+}
+
+.list-item__input {
+    width: 350px;
+    min-width: auto;
+    border: none;
+}
+.list-item__input:focus {
+    border-bottom: 1px solid #ccc;
+}
+
+.list-item__button {
+    opacity: 0;
+    pointer-events: none;
+
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.list-item__button:hover,
+.list-item__button:focus {
+    background-color: #282828;
+    border-color: #282828;
+    color: #fff;
+}
+.list-item__button:active {
+    border-color: rgba(40, 40, 40, 0);
+    background-color: rgba(40, 40, 40, 0.9);
+}
+
+.edit {
+    border-radius: 5px 0 0 5px;
+}
+.delete {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
