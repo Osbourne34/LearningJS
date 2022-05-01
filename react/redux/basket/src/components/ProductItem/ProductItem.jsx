@@ -1,4 +1,5 @@
-const ProductItem = ({ name, price, image, id, onClick }) => {
+const ProductItem = ({ name, price, image, onAddToBasket }) => {
+
     return (
         <div className="product">
             <img
@@ -11,7 +12,7 @@ const ProductItem = ({ name, price, image, id, onClick }) => {
                 <div className="product__price">{new Intl.NumberFormat('ru-RU').format(price)} UZS</div>
                 <button
                     className="button"
-                    onClick={onClick}
+                    onClick={onAddToBasket}
                 >
                     Add to basket
                 </button>

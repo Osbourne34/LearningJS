@@ -1,13 +1,12 @@
 import { useDispatch } from 'react-redux';
+import { addProductToBasket } from './../../redux/basketSlice';
 import ProductItem from './../ProductItem/ProductItem';
-import { addPToBasket, setTotalQuantity } from './../../redux/basketSlice';
 
 const Products = ({ products }) => {
     const dispatch = useDispatch();
 
-    const addProductToBasket = (product) => {
-        dispatch(addPToBasket({ product }))
-        dispatch(setTotalQuantity())
+    const onAddToBasket = (product) => {
+        dispatch(addProductToBasket(product))
     }
 
     return (
@@ -18,7 +17,7 @@ const Products = ({ products }) => {
                         return <ProductItem
                             key={product.id}
                             {...product}
-                            onClick={() => addProductToBasket(product)}
+                            onAddToBasket={() => onAddToBasket(product)}
                         />
                     })}
                 </div>
