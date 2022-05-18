@@ -1,8 +1,9 @@
 import { Card, CardMedia, CardContent, Typography, Box, CardActions, IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const Good = ({ title, description, price, thumbnail, onRemove, isDisabled }) => {
+const Good = ({ title, description, price, thumbnail, id, onRemove, isDisabled }) => {
 
     return (
         <Card
@@ -50,9 +51,18 @@ const Good = ({ title, description, price, thumbnail, onRemove, isDisabled }) =>
                         {`${price}$`}
                     </Typography>
                     <Box >
-                        <IconButton color="primary">
-                            <EditIcon />
+                        <IconButton
+                            color="primary"
+                            sx={{p: 0}}
+                        >
+                            <Link
+                                to={`/good/${id}`}
+                                style={{padding: '20px'}}
+                            >
+                            </Link>
+                            <EditIcon sx={{position: 'absolute', pointerEvents: 'none'}} />
                         </IconButton>
+
                         <IconButton
                             color="error"
                             onClick={onRemove}

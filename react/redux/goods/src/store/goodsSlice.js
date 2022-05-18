@@ -33,6 +33,37 @@ export const fetchDeleteGood = createAsyncThunk(
     }
 )
 
+export const fetchAddGood = createAsyncThunk(
+    'goods/fetchAddGood',
+    async (dataGood) => {
+        const response = await fetch('https://dummyjson.com/products/add', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(dataGood)
+        })
+        const good = await response.json();
+        return good;
+    }
+)
+
+export const fetchChangeGood = createAsyncThunk(
+    'goods/fetchChangeGood',
+    async ({ title, description, price, thumbnail, id }) => {
+        const response = await fetch('https://dummyjson.com/products/' + id, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title,
+                description,
+                price,
+                thumbnail
+            })
+        })
+        const newGood = await response.json();
+        return newGood;
+    }
+)
+
 const goodsSlice = createSlice({
     name: 'goods',
     initialState,
@@ -68,6 +99,28 @@ const goodsSlice = createSlice({
         [fetchDeleteGood.fulfilled]: (state, action) => {
             state.filteredGoods.products = removeGoods(state.filteredGoods.products, action.payload);
             state.goods.products = removeGoods(state.goods.products, action.payload);
+        },
+
+        [fetchAddGood.pending]: (state, action) => {
+            state.isLoading = true;
+        },
+        [fetchAddGood.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            state.goods.products.push(action.payload);
+        },
+
+        [fetchChangeGood.pending]: (state, action) => {
+            state.isLoading = true;
+        },
+        [fetchChangeGood.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            console.log(action.payload);
+            state.goods.products = state.goods.products.map(good => {
+                if(+action.payload.id === good.id) {
+                    return good = action.payload
+                }
+                return good;
+            })
         }
     },
 

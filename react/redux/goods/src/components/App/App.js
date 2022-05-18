@@ -2,9 +2,10 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 import { Container, Box, Button } from '@mui/material';
 
+import { routes } from './../../route';
+
 import Search from './../Search';
 import Goods from './../Goods';
-import Form from './../Form';
 
 const App = () => {
     return (
@@ -20,14 +21,25 @@ const App = () => {
                         }}
                     >
                         <Search />
-                        <Link to="addition">
-                            Add Product
-                        </Link>
+                        <Button
+                            sx={{ p: 0 }}
+                            variant="contained"
+                            color="success"
+                        >
+                            <Link
+                                to="addition"
+                                style={{ padding: '6px 16px', color: 'inherit', textDecoration: 'none' }}
+                            >
+                                Add product
+                            </Link>
+                        </Button>
                     </Box>
                     <Goods />
                 </Container>}
             />
-            <Route path="/addition" element={<Form />} />
+            {routes.map(({path, component}) => {
+                return <Route key={path} path={path} element={component} />
+            })}
         </Routes >
     );
 }

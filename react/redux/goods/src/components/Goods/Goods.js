@@ -13,7 +13,9 @@ const Goods = () => {
     const [isDisabledRemoveBtn, setIsDisabledRemoveBtn] = useState(false);
 
     useEffect(() => {
-        dispatch(fetchGoods());
+        if(!goods) {
+            dispatch(fetchGoods());
+        }
     }, [dispatch])
 
     const handleRemoveGood = (id) => {
